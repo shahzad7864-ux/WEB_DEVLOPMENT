@@ -1,0 +1,30 @@
+<html>
+<h1>Sorting  three numbers in descending order</h1>
+<body>
+<script>
+
+let a = parseInt(prompt("Enter first number"));
+let b = parseInt(prompt("Enter second number"));
+let c = parseInt(prompt("Enter third number"));
+document.write("Before sorting: " + a + "," + b + "," + c + "<br>");
+
+if (a < b) {
+    let temp = a; 
+    a = b; 
+    b = temp;
+}
+if (b < c) {
+    let temp = b; 
+    b = c; 
+    c = temp;
+}
+if (a < b) {
+    let temp = a; 
+    a = b; 
+    b = temp;
+}
+
+document.write("After sorting: " + a + "," + b + "," + c); // Sorted order
+</script>
+</body>
+</html>

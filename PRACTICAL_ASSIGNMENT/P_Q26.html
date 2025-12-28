@@ -1,0 +1,22 @@
+<html>
+    <h1>Neon number</h1>
+    <body>
+        <script>
+            let num = parseInt(prompt("Enter your number:"));
+            let sum = 0;
+            let temp = num*num;
+            while(temp != 0){
+                let rem = temp % 10;
+                sum += rem;
+                temp = Math.floor(temp/10);
+            }
+            if(sum === num){
+                document.write("Given number is a neon number: " + num);
+            }
+            else{
+                document.write("Given number is not a neon number:" + num);
+            }
+
+        </script>
+    </body>
+</html>

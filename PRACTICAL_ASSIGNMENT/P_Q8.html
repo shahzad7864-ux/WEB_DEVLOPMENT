@@ -1,0 +1,19 @@
+<html>
+    <h1>Discount Calculation</h1>
+    <script>
+        let price = parseFloat(prompt("Enter your price:"));
+        let discount;
+        if(price >= 100){
+             discount = 20;
+             document.write("Purchase amount=" + " " + price + "<br>" + "Discount=" + " " + discount + "<br>" + "Total Amount after discount=" + " " + (price-discount));
+        }
+        else if(price >= 50){
+             discount = 10;
+             document.write("Purchase amount=" + " " + price + "<br>" + "Discount=" + " " + discount + "<br>" + "Total Amount after discount=" + " " + (price-discount));
+        }
+        else{
+             discount = 0;
+             document.write("Purchase amount=" + " " + price + "<br>" + "Discount=" + " " + discount + "<br>" + "Total Amount after discount=" + " " + (price-discount));
+        }
+    </script>
+</html>

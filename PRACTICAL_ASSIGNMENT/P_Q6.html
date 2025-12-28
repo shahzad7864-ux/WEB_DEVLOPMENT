@@ -1,0 +1,24 @@
+<html>
+    <h1>Ticket price based on age</h1>
+    <script>
+        let age = parseInt(prompt("Enter your age"));
+        let price;
+        if(age<12){
+            price = 5 ;
+            document.write("Ticket price=" + " " + price + "rs.");
+        }
+        else if(age<18){
+            price = 10 ;
+            document.write("Ticket price=" + " " + price + "rs.");
+        }
+        else if(age<60){
+            price = 20 ;
+            document.write("Ticket price=" + " " + price + "rs.");
+        }
+        else if(age>60){
+            price = 15 ;
+            document.write("Ticket price=" + " " + price + "rs.");
+        }
+        
+    </script>
+</html>

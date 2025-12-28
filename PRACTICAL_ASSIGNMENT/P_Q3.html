@@ -1,0 +1,43 @@
+
+<html>
+<body>
+<h1>Marks</h1>
+
+<script>
+let name = prompt("Enter your name:");
+let erp = prompt("Enter you erp id:");
+let sub_1 = parseInt(prompt("Enter First Subject Marks:"));
+let sub_2 = parseInt(prompt("Enter Second Subject Marks:"));
+let sub_3 = parseInt(prompt("Enter Third Subject Marks:"));
+let sub_4 = parseInt(prompt("Enter Fourth Subject Marks:"));
+let sub_5 = parseInt(prompt("Enter Fifth Subject Marks:"));
+let total = sub_1 + sub_2 + sub_3 + sub_4 + sub_5;
+let avg = total/5;
+
+document.write("NAME=" + " " + name +"<br>");
+document.write("ERP-ID=" + " " + erp + "<br>");
+document.write("OBTAINED MARKS=" + " " + avg + "<br>");
+
+
+if(avg>=90){
+    document.write("Grade A");
+}
+
+else if(avg>=70 ) {
+    document.write("Grade B");
+}
+
+else if(avg>=50 ) {
+    document.write("Grade C");
+}
+else if(avg>=30 ) {
+    document.write("Grade D");
+}
+else {
+    document.write("Fail");
+}
+
+</script>
+
+</body>
+</html>

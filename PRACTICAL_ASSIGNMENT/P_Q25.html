@@ -1,0 +1,21 @@
+<html>
+    <h1>Checks if the last digit of three integers is equal or not</h1>
+    <body>
+        <script>
+            let num1 = parseInt(prompt("Enter first integer"));
+            let num2 = parseInt(prompt("Enter second integer"));
+            let num3 = parseInt(prompt("Enter third integer"));
+            let rem1 = num1%10;
+            let rem2 = num2%10;
+            let rem3 = num3%10;
+            if(rem1 === rem2 && rem2 === rem3){
+                document.write("True");
+            }
+            else{
+                document.write("False");
+            }
+
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,21 @@
+<html>
+    <h1>Find out 3 digit Armstrong numbers</h1>
+    <body>
+        <script>
+       
+        for (let num = 100; num <= 999; num++) {
+            let sum = 0;
+            let temp = num;
+            while (temp != 0) {
+               let rem = temp % 10;  
+               sum += rem ** 3;      
+               temp = Math.floor(temp / 10);
+            }
+        if (sum === num) {
+           document.write(num + "<br>");
+    }
+}
+
+        </script>
+    </body>
+</html>

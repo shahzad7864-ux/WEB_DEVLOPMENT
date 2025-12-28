@@ -1,0 +1,26 @@
+<html>
+    <h1>Find the sign of the product of three numbers</h1>
+    <body>
+        <script>
+            let num1 = parseInt(prompt("Enter first number"));
+            let num2 = parseInt(prompt("Enter second number"));
+            let num3 = parseInt(prompt("Enter third number"));
+            document.write("Sample numbers: " + num1 + "," + num2 + "," + num3 + "<br>");
+            let pro = num1*num2*num3;
+            if(pro > 0){
+                    document.write("Output: The sign is +");
+            }
+            else if(pro < 0){
+                    document.write("Output: The sign is -");
+            }
+            else if(pro === 0){
+                    document.write("Atleast one number is zero from the given numbers");
+            }
+            else{
+                    document.write("Invalid Input");
+            }
+
+
+        </script>
+    </body>
+</html>

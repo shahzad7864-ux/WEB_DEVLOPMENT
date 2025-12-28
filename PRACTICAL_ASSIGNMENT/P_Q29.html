@@ -1,0 +1,24 @@
+<html>
+    <h1>Palindrome number</h1>
+    <body>
+        <script>
+            let num = parseInt(prompt("Enter your number"));
+            let O_N = num;
+            let rev = 0;
+            let rem;
+            while(num != 0){
+                rem = num%10;
+                rev = rev*10 + rem;
+                num = Math.floor(num/10);
+            }
+            document.write("Original number: " + O_N + "<br>");
+            document.write("Reverse number: " + rev + "<br>");
+            if(O_N === rev){
+                document.write("Given number is a palindrome number.");
+            }
+            else{
+                document.write("Given number is not a palindrome number.");
+            }
+        </script>
+    </body>
+</html>

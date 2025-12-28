@@ -1,0 +1,29 @@
+<html>
+    <h1>Duck Number</h1>
+    <body>
+        <script>
+            let num = parseInt(prompt("Enter your number"));
+            let rem;
+            let temp = num;
+            let haszero= false;
+            
+            while (temp > 0) {
+               rem = temp % 10;
+               if(rem === 0) {
+                   haszero = true;
+                   break;
+               }
+               temp = Math.floor(temp / 10);
+               
+            }
+            if(haszero===true) {
+                document.write(num + " " + "is a duck number");
+            }
+            else{
+                document.write(num + " " + "is not a duck number");
+            }
+            
+
+        </script>
+    </body>
+</html>
