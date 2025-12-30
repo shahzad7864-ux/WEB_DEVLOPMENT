@@ -1,49 +1,119 @@
 <html>
-    <h1>Day of the week</h1>
-    <body>
-        <script>
-            let Day = parseInt(prompt("Enter your choice:"));
-            switch(Day){
-                case 1:{
-                    document.write("Monday");
-                    break;
-                }
+<head>
+  
+  <title>Day of the Week</title>
 
-                case 2:{
-                    document.write("Tuesday");
-                    break;
-                }
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #eef2ff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
 
-                case 3:{
-                    document.write("Wednesday");
-                    break;
-                }
+    .container {
+      background: #ffffff;
+      padding: 25px 30px;
+      width: 300px;
+      border-radius: 8px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      text-align: center;
+    }
 
-                case 4:{
-                    document.write("Thursday");
-                    break;
-                }
+    h1 {
+      margin-bottom: 15px;
+      color: #333;
+    }
 
-                case 5:{
-                    document.write("Friday");
-                    break;
-                }
+    label {
+      font-weight: bold;
+    }
 
-                case 6:{
-                    document.write("Saturday");
-                    break;
-                }
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-top: 8px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
 
-                case 7:{
-                    document.write("Sunday");
-                    break;
-                }
+    button {
+      width: 100%;
+      margin-top: 15px;
+      padding: 10px;
+      background: #4f46e5;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
 
-                default :{
-                    document.write("Enter valid day between (1-7)");
-                    break;
-                }
-            }
-        </script>
-    </body>
+    button:hover {
+      background: #4338ca;
+    }
+
+    .result {
+      margin-top: 15px;
+      padding: 10px;
+      background: #f8fafc;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Day of the Week</h1>
+
+    <form onsubmit="showDay(); return false;">
+      <label>Enter a number (1–7)</label>
+      <input type="number" id="day" min="1" max="7" required>
+
+      <button type="submit">Show Day</button>
+    </form>
+
+    <div class="result" id="output"></div>
+  </div>
+
+  <script>
+    function showDay() {
+      let Day = parseInt(document.getElementById("day").value);
+      let result = "";
+
+      switch (Day) {
+        case 1:
+          result = "Monday";
+          break;
+        case 2:
+          result = "Tuesday";
+          break;
+        case 3:
+          result = "Wednesday";
+          break;
+        case 4:
+          result = "Thursday";
+          break;
+        case 5:
+          result = "Friday";
+          break;
+        case 6:
+          result = "Saturday";
+          break;
+        case 7:
+          result = "Sunday";
+          break;
+        default:
+          result = "Enter a valid day (1–7)";
+      }
+
+      document.getElementById("output").innerHTML = result;
+    }
+  </script>
+
+</body>
 </html>
