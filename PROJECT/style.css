@@ -599,3 +599,36 @@ footer {
 .nav-overlay.show {
   display: block;
 }
+
+.education-section {
+  padding: 80px 20px;
+  background: #f7faff;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  color: #232946;
+}
+
+.education-card {
+  max-width: 800px;
+  margin: 0 auto 25px;
+  padding: 25px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.education-card h3 {
+  margin-bottom: 10px;
+  color: #3a86ff;
+}
+
+.education-card p {
+  margin: 5px 0;
+  color: #444;
+}
+
+
