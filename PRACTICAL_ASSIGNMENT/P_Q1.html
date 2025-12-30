@@ -1,21 +1,94 @@
-
 <html>
+<head>
+
+  <title>Even or Odd Checker</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f4ff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .box {
+      background: #ffffff;
+      padding: 25px 30px;
+      width: 300px;
+      border-radius: 8px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-top: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      width: 100%;
+      margin-top: 15px;
+      padding: 10px;
+      background: #2563eb;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #1e40af;
+    }
+
+    .result {
+      margin-top: 15px;
+      font-weight: bold;
+      font-size: 18px;
+      color: #111;
+    }
+  </style>
+</head>
+
 <body>
-<h1>Even and Odd number</h1>
 
-<script>
-let x = parseInt(prompt("Enter Number:"));
+  <div class="box">
+    <h1>Even or Odd</h1>
 
-if(x%2===0){
-    documnet.write("Given number:"+x+" "+ "is even number");
-}
-if(x%2!=0){
-    document.write("Given number:"+x+" "+ "is odd number");
-}
-if(x===0){
-    document.write("Given number:"+x+" "+ "is zero");
-}
-</script>
+    <form onsubmit="checkNumber(); return false;">
+      <input type="number" id="num" placeholder="Enter a number" required>
+      <button type="submit">Check</button>
+    </form>
+
+    <div class="result" id="output"></div>
+  </div>
+
+  <script>
+    function checkNumber() {
+      let number = parseInt(document.getElementById("num").value);
+      let result = "";
+
+      if (number === 0) {
+        result = "Zero";
+      } else if (number % 2 === 0) {
+        result = "Even Number";
+      } else {
+        result = "Odd Number";
+      }
+
+      document.getElementById("output").innerHTML = result;
+    }
+  </script>
 
 </body>
 </html>
