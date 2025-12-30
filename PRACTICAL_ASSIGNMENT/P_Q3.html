@@ -1,43 +1,135 @@
-
 <html>
+<head>
+  <title>Student Marks & Grade</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f6ff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      background: #fff;
+      padding: 25px 30px;
+      width: 350px;
+      border-radius: 8px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      width: 100%;
+      margin-top: 20px;
+      padding: 10px;
+      border: none;
+      background: #4a6cf7;
+      color: white;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #3a5be0;
+    }
+
+    .result {
+      margin-top: 20px;
+      padding: 10px;
+      background: #f7f9ff;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
 <body>
-<h1>Marks</h1>
 
-<script>
-let name = prompt("Enter your name:");
-let erp = prompt("Enter you erp id:");
-let sub_1 = parseInt(prompt("Enter First Subject Marks:"));
-let sub_2 = parseInt(prompt("Enter Second Subject Marks:"));
-let sub_3 = parseInt(prompt("Enter Third Subject Marks:"));
-let sub_4 = parseInt(prompt("Enter Fourth Subject Marks:"));
-let sub_5 = parseInt(prompt("Enter Fifth Subject Marks:"));
-let total = sub_1 + sub_2 + sub_3 + sub_4 + sub_5;
-let avg = total/5;
+  <div class="container">
+    <h1>Marks</h1>
 
-document.write("NAME=" + " " + name +"<br>");
-document.write("ERP-ID=" + " " + erp + "<br>");
-document.write("OBTAINED MARKS=" + " " + avg + "<br>");
+    <form onsubmit="calculateGrade(); return false;">
+      <label>Name</label>
+      <input type="text" id="name" required>
 
+      <label>ERP ID</label>
+      <input type="text" id="erp" required>
 
-if(avg>=90){
-    document.write("Grade A");
-}
+      <label>Subject 1 Marks</label>
+      <input type="number" id="s1" required>
 
-else if(avg>=70 ) {
-    document.write("Grade B");
-}
+      <label>Subject 2 Marks</label>
+      <input type="number" id="s2" required>
 
-else if(avg>=50 ) {
-    document.write("Grade C");
-}
-else if(avg>=30 ) {
-    document.write("Grade D");
-}
-else {
-    document.write("Fail");
-}
+      <label>Subject 3 Marks</label>
+      <input type="number" id="s3" required>
 
-</script>
+      <label>Subject 4 Marks</label>
+      <input type="number" id="s4" required>
+
+      <label>Subject 5 Marks</label>
+      <input type="number" id="s5" required>
+
+      <button type="submit">Calculate Grade</button>
+    </form>
+
+    <div class="result" id="output"></div>
+  </div>
+
+  <script>
+    function calculateGrade() {
+      let name = document.getElementById("name").value;
+      let erp = document.getElementById("erp").value;
+
+      let total =
+        Number(s1.value) +
+        Number(s2.value) +
+        Number(s3.value) +
+        Number(s4.value) +
+        Number(s5.value);
+
+      let avg = total / 5;
+      let grade = "";
+
+      if (avg >= 90) grade = "Grade A";
+      else if (avg >= 70) grade = "Grade B";
+      else if (avg >= 50) grade = "Grade C";
+      else if (avg >= 30) grade = "Grade D";
+      else grade = "Fail";
+
+      document.getElementById("output").innerHTML =
+        "NAME: " + name + "<br>" +
+        "ERP-ID: " + erp + "<br>" +
+        "OBTAINED MARKS: " + avg + "<br>" +
+        grade;
+    }
+  </script>
 
 </body>
 </html>
+
+
+    
