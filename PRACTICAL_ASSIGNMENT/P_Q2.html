@@ -1,32 +1,105 @@
 <html>
-    <h1>Greatest Number</h1>
-    <body>
-        <script>
-                let num1 = parseInt(prompt("Enter first number"));
-                let num2 = parseInt(prompt("Enter second number"));
-                let num3 = parseInt(prompt("Enter third number"));
-                document.write("First number=" + " " + num1 + "<br>");
-                document.write("Second number=" + " " + num2 + "<br>");
-                document.write("Third number=" + " " + num3 + "<br>");
-                if(num1>num2){
-                    if(num1>num3){
-                        document.write("First number is greatest");
-                    }
-                }
-                if(num2>num1){
-                    if(num2>num3){
-                        document.write("Second number is greatest");
-                    }
-                }
-                if(num3>num1){
-                    if(num3>num2){
-                        document.write("Third number is greatest");
-                    }
-                }
-                
-            
+<head>
 
-            
-        </script>
-    </body>
+  <title>Greatest Number</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #eef2ff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background: #ffffff;
+      padding: 25px 30px;
+      width: 320px;
+      border-radius: 8px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-top: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      width: 100%;
+      margin-top: 15px;
+      padding: 10px;
+      background: #4f46e5;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #4338ca;
+    }
+
+    .result {
+      margin-top: 15px;
+      padding: 10px;
+      background: #f8fafc;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Greatest Number</h1>
+
+    <form onsubmit="findGreatest(); return false;">
+      <input type="number" id="n1" placeholder="Enter first number" required>
+      <input type="number" id="n2" placeholder="Enter second number" required>
+      <input type="number" id="n3" placeholder="Enter third number" required>
+
+      <button type="submit">Find Greatest</button>
+    </form>
+
+    <div class="result" id="output"></div>
+  </div>
+
+  <script>
+    function findGreatest() {
+      let num1 = Number(document.getElementById("n1").value);
+      let num2 = Number(document.getElementById("n2").value);
+      let num3 = Number(document.getElementById("n3").value);
+
+      let result = "";
+
+      if (num1 >= num2 && num1 >= num3) {
+        result = "First number is the greatest";
+      } else if (num2 >= num1 && num2 >= num3) {
+        result = "Second number is the greatest";
+      } else {
+        result = "Third number is the greatest";
+      }
+
+      document.getElementById("output").innerHTML =
+        "First Number: " + num1 + "<br>" +
+        "Second Number: " + num2 + "<br>" +
+        "Third Number: " + num3 + "<br><br>" +
+        result;
+    }
+  </script>
+
+</body>
 </html>
